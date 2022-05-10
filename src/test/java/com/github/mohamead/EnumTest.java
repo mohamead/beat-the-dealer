@@ -7,14 +7,14 @@ import org.junit.jupiter.api.Test;
 class EnumTest {
 
     @Test
-    void givenWrongFaceValue_whenCallingOf_ThenIllegalArgumentExceptionShouldBeThrown() {
+    void GivenWrongFaceValue_WhenCallingOf_ThenIllegalArgumentExceptionShouldBeThrown() {
         assertThrows(IllegalArgumentException.class, () -> {
             Face.of("asdf");
         });
     }
 
     @Test
-    void givenWrongSuiteValue_whenCallingOf_ThenIllegalArgumentExceptionShouldBeThrown() {
+    void GivenWrongSuiteValue_WhenCallingOf_ThenIllegalArgumentExceptionShouldBeThrown() {
         assertThrows(IllegalArgumentException.class, () -> {
             Suite.of("sdfa");
         });

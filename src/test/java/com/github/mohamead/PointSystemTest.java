@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.EnumSource;
 class PointSystemTest {
 
     @Test
-    void givenPointSystem_WhenCallingGetPoints_ThenReturnPoints() {
+    void GivenPointSystem_WhenCallingGetPoints_ThenReturnPoints() {
         final HashMap<Card, Integer> points = PointSystem.getPoints();
         assertAll("Should return 52 cards with a total of 380 points",
                 () -> assertEquals(52, points.keySet().size()),
@@ -20,7 +20,7 @@ class PointSystemTest {
 
     @ParameterizedTest
     @EnumSource(Suite.class)
-    void givenCardIsBetweenTwoAndTen_WhenCallingGetPoint_ThenReturnCorrespondingPoints(Suite suite) {
+    void GivenCardIsBetweenTwoAndTen_WhenCallingGetPoint_ThenReturnCorrespondingPoints(Suite suite) {
         for (int i = 2; i < 11; i++) {
             assertEquals(i, PointSystem.getPoint(new Card(suite, Face.of(i + ""))));
         }
@@ -28,7 +28,7 @@ class PointSystemTest {
 
     @ParameterizedTest
     @EnumSource(Suite.class)
-    void givenCardIsBetweenJackAndKing_WhenCallingGetPoint_ThenReturnTenPoints(Suite suite) {
+    void GivenCardIsBetweenJackAndKing_WhenCallingGetPoint_ThenReturnTenPoints(Suite suite) {
         assertAll(
                 () -> assertEquals(10, PointSystem.getPoint(new Card(suite, Face.JACK))),
                 () -> assertEquals(10, PointSystem.getPoint(new Card(suite, Face.QUEEN))),
@@ -38,7 +38,7 @@ class PointSystemTest {
 
     @ParameterizedTest
     @EnumSource(Suite.class)
-    void givenCardIsAce_whenCallingGetPoint_ThenReturnElevenPoints(Suite suite) {
+    void GivenCardIsAce_whenCallingGetPoint_ThenReturnElevenPoints(Suite suite) {
         assertEquals(11, PointSystem.getPoint(new Card(suite, Face.ACE)));
     }
 

@@ -51,7 +51,7 @@ class GameTest {
     }
 
     @Test
-    void givenSamHasSeventeenAndDealerHasSeventeen_WhenPlayingBlackJack_ThenRuntimeExceptionShouldBeThrown() {
+    void GivenSamHasSeventeenAndDealerHasSeventeen_WhenPlayingBlackJack_ThenRuntimeExceptionShouldBeThrown() {
         final List<Card> cards = new ArrayList<>();
         cards.add(new Card(Suite.CLUB, Face.TEN));
         cards.add(new Card(Suite.SPADE, Face.TEN));
@@ -64,7 +64,7 @@ class GameTest {
     }
 
     @Test
-    void givenSamsScoreIsOverDealer_WhenPlayingBlackJack_ThenRunTimeExceptionShouldBeThrown() {
+    void GivenSamsScoreIsOverDealer_WhenPlayingBlackJack_ThenRunTimeExceptionShouldBeThrown() {
         final List<Card> cards = new ArrayList<>();
         cards.add(new Card(Suite.CLUB, Face.TEN));
         cards.add(new Card(Suite.SPADE, Face.TEN));
@@ -77,7 +77,7 @@ class GameTest {
     }
 
     @Test
-    void givenGameIsNotStarted_WhenCallingGetWinner_ThenRuntimeExceptionShouldBeThrown() {
+    void GivenGameIsNotStarted_WhenCallingGetWinner_ThenRuntimeExceptionShouldBeThrown() {
         final List<Card> cards = new ArrayList<>();
         cards.add(new Card(Suite.CLUB, Face.TEN));
         cards.add(new Card(Suite.CLUB, Face.ACE));
@@ -90,7 +90,7 @@ class GameTest {
     }
 
     @Test
-    void givenGameIsNotStarted_WhenCallingShowHands_ThenRuntimeExceptionShouldBeThrown() {
+    void GivenGameIsNotStarted_WhenCallingShowHands_ThenRuntimeExceptionShouldBeThrown() {
         final List<Card> cards = new ArrayList<>();
         cards.add(new Card(Suite.CLUB, Face.TEN));
         cards.add(new Card(Suite.CLUB, Face.ACE));

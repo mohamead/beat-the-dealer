@@ -11,13 +11,13 @@ import org.junit.jupiter.api.Test;
 class DeckTest {
 
     @Test
-    void givenEmptyListOfCards_whenCallingDeckGetCards_ThenReturnNewListOfFiftyTwoUniqueCards() {
+    void GivenEmptyListOfCards_WhenCallingDeckGetCards_ThenReturnNewListOfFiftyTwoUniqueCards() {
         final Deck deck = new Deck(new ArrayList<>());
         assertEquals(52, deck.getCards().stream().distinct().count());
     }
 
     @Test
-    void givenDuplicateCards_WhenCreatingDeck_ThenRuntimeExceptionShouldBeThrown() {
+    void GivenDuplicateCards_WhenCreatingDeck_ThenRuntimeExceptionShouldBeThrown() {
         final List<Card> cards = new ArrayList<>();
         cards.add(new Card(Suite.CLUB, Face.ACE));
         cards.add(new Card(Suite.CLUB, Face.ACE));
